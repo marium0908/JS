@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="">
+    <meta name="description" content="side description">
+    <meta name="keywords" content="blog">
+      <meta name="robots"content="index,follow">
+       <meta name="language" content="English"> 
+       <meta name="revisit-after"content="7 days">
+        <meta name="author"content="Marium islam">
+         <title>Java Script</title>
+         <!-- icons -->
+         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/media.css">
+     <link rel="stylesheet" href="icons/fontawesome/css/all.min.css">
+     <link rel="stylesheet" href="icons/pe-7-stroke/css/pe-icon-7-stroke.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+       
+      </head>
+      <body>
+        <div class="body">
+       
+    <h1>JavaScript Math</h1>
+<h2>The Math.abs() Method</h2>
+<p>Math.abs() returns the absolute value of a number:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = Math.abs(-7.25);
+</script>
+<h2>The accessKey Property</h2>
+
+<p>The accesskey attribute specifies a shortcut key to activate/focus an element:</p>
+
+<a id="w3s" href="https://www.facebook.com/marium0908">Facebook</a><br>
+
+
+
+<script>
+document.getElementById("w3s").accessKey = "w";
+</script>
+<h1>The Element Object</h1>
+<h2>The addEventListener() Method</h2>
+
+<p>Execute a function when a user clicks on a button:</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo">
+
+<script>
+const element = document.getElementById("myBtn");
+element.addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+<h1>The Element Object</h1>
+<h2>The appendChild() Method</h2>
+
+<ul id="myList">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<p>Click "Append" to append an item to the end of the list:</p>
+
+<button onclick="myFunction()">Append</button>
+
+<script>
+function myFunction() {
+
+// Create an "li" node:
+const node = document.createElement("li");
+
+// Create a text node:
+const textnode = document.createTextNode("Water");
+
+// Append the text node to the "li" node:
+node.appendChild(textnode);
+
+// Append the "li" node to the list:
+document.getElementById("myList").appendChild(node);
+}
+</script>
+<h1>HTML DOM Attributes</h1>
+<h2>The length Property</h2>
+
+<img id="myImg" alt="Flower" src="images/img.png" width="150" height="113">
+
+<p>The number of attributes of the image are:</p>
+
+<p id="demo"></p>
+
+<script>
+let num = document.getElementById("myImg").attributes.length;
+document.getElementById("demo").innerHTML = num;
+</script>
+<h1>The Element Object</h1>
+<h2>The focus() and blur() Methods</h2>
+
+<input type="text" id="myText" value="A text field">
+
+<p>Click the buttons to give or remove focus from the text field.</p>
+
+<button type="button" onclick="getFocus()">Get focus</button>
+<button type="button" onclick="loseFocus()">Lose focus</button>
+
+<script>
+function getFocus() {
+  document.getElementById("myText").focus();
+}
+
+function loseFocus() {
+  document.getElementById("myText").blur();
+}
+</script>
+<style>
+div {
+  background-color: light pink;
+  padding: 16px;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The childElementCount Property</h2>
+
+<div id="myDIV">
+  <p>First p element</p>
+  <p>Second p element</p>
+</div>
+
+<p>Number of children in the div element is:</p>
+<p id="demo"></p>
+
+<script>
+let numb = document.getElementById("myDIV").childElementCount;
+document.getElementById("demo").innerHTML = numb;
+</script>
+<!-- This is a comment node! -->
+
+<h1>The Element Object</h1>
+<h2>The childNodes Property</h2>
+<p>Whitespace between elements are text nodes. Comments are also nodes.</p>
+
+<p>The body element's child nodes are:</p>
+<p id="demo"></p>
+
+<script>
+const nodeList = document.body.childNodes;
+
+let text = "";
+for (let i = 0; i < nodeList.length; i++) {
+  text += nodeList[i].nodeName + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script
+<h1>The Element Object</h1>
+<h2>The children Property</h2>
+
+<p>The tag names of the body's children are:</p>
+<p id="demo"></p>
+
+<script>
+const collection = document.body.children;
+let text = "";
+for (let i = 0; i < collection.length; i++) {
+  text += collection[i].tagName + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+<style>
+.myStyle {
+  background-color: pink;
+  padding: 16px;
+}
+</style>
+
+<body>
+<h1>The DOMToken Object</h1>
+<h2>The add() Method</h2>
+
+<button onclick="myFunction()">Add</button>
+<p>Click "Add" to add the "myStyle" class to myDIV.</p>
+
+<div id="myDIV">
+<p>I am a myDIV.</p>
+</div>
+
+<script>
+function myFunction() {
+  const list = document.getElementById("myDIV").classList;
+  list.add("myStyle");
+}
+</script>
+<style>
+.mystyle {
+  background-color: pink;
+  padding: 16px;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The className Property</h2>
+
+<div id="myDIV">
+<p>I am myDIV.</p>
+</div>
+
+<p>Click the button to set a class for myDIV:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").className = "mystyle";
+}
+</script>
+<h1>The Element Object</h1>
+<h2>The click() Method</h2>
+
+<p>Hover over the checkbox to simulate a mouse-click.</p>
+
+<form>
+  <input type="checkbox" id="myCheck" onmouseover="myFunction()">
+</form>
+
+<script>
+function myFunction() {
+  document.getElementById("myCheck").click();
+}
+</script>
+<style>
+#myDIV {
+  height: 250px;
+  width: 400px;
+  padding: 10px;
+  margin: 15px;
+  border: 5px solid black;
+  background-color: lightpink;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The clientHeight and clientWidth Properties</h2>
+
+<div id="myDIV">
+  <b>Information about myDIV:</b><br>
+  Height: 250px<br>
+  Width: 400px<br>
+  Padding: 10px<br>
+  Margin: 15px<br>
+  Border: 5px<br>
+  <p id="demo"></p>
+</div>
+
+<script>
+const element = document.getElementById("myDIV");
+let text = "clientHeight: " + element.clientHeight + "px<br>";
+text += "clientWidth: " + element.clientWidth + "px";
+document.getElementById("demo").innerHTML = text;
+</script>
+<style>
+#myDIV {
+  height: 250px;
+  width: 400px;
+  padding: 10px;
+  margin: 15px;
+  border-top: 15px solid black;
+  border-left: 10px solid black;
+  background-color: lightblue;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The clientTop and clientLeft Properties</h2>
+
+<p>Display the width of myDIV's top and left border:</p>
+
+<div id="myDIV">
+  <p id="demo"></p>
+</div>
+
+<script>
+const element = document.getElementById("myDIV");
+let text = "clientTop: " + element.clientTop + "px<br>";
+text += "clientLeft: " + element.clientLeft + "px";
+document.getElementById("demo").innerHTML = text;
+</script>
+<style>
+#myDIV {
+  height: 250px;
+  width: 400px;
+  padding: 10px;
+  margin: 15px;
+  border-top: 15px solid black;
+  border-left: 10px solid black;
+  background-color: lightblue;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The clientTop and clientLeft Properties</h2>
+
+<p>Display the width of myDIV's top and left border:</p>
+
+<div id="myDIV">
+  <p id="demo"></p>
+</div>
+
+<script>
+const element = document.getElementById("myDIV");
+let text = "clientTop: " + element.clientTop + "px<br>";
+text += "clientLeft: " + element.clientLeft + "px";
+document.getElementById("demo").innerHTML = text;
+</script>
+<style>
+#myDIV {
+  height: 250px;
+  width: 400px;
+  padding: 10px;
+  margin: 15px;
+  border: 5px solid black;
+  background-color: lightpink;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The clientHeight and clientWidth Properties</h2>
+
+<div id="myDIV">
+  <b>Information about myDIV:</b><br>
+  Height: 250px<br>
+  Width: 400px<br>
+  Padding: 10px<br>
+  Margin: 15px<br>
+  Border: 5px<br>
+  <p id="demo"></p>
+</div>
+
+<script>
+const element = document.getElementById("myDIV");
+let text = "clientHeight: " + element.clientHeight + "px<br>";
+text += "clientWidth: " + element.clientWidth + "px";
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<h1>The Element Object</h1>
+<h2>The cloneNode() Method</h2>
+
+<button onclick="myFunction()">Copy</button>
+<p>Click "Copy" to copy an item from one list to another.</p>
+
+<ul id="myList1"><li>Coffee</li><li>Tea</li></ul>
+<ul id="myList2"><li>Water</li><li>Milk</li></ul>
+
+<p>If you change the <b>deep</b> parameter to false, only an empty LI element will be cloned.</p>
+
+<script>
+function myFunction() {
+  const node = document.getElementById("myList2").lastChild;
+  const clone = node.cloneNode(true);
+  document.getElementById("myList1").appendChild(clone);
+}
+</script>
+<style>
+.container, .demo {
+  background-color: pink;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The closest() Method</h2>
+
+<div class="demo"> Grandparent
+  <div class="demo container">Parent
+    <div id="myElement" class="demo">The parent of this div element will be selected.</div>
+  </div>
+</div>
+
+<script>
+const element = document.getElementById("myElement");
+const closest = element.closest(".container");
+if (closest) {
+  closest.style.border = "4px solid black";
+}
+</script>
+<h1>The Element Object</h1>
+<h2>The compareDocumentPosition() Method</h2>
+
+<p id="p1">This is a paragraph</p>
+<p id="p2">This is another paragraph</p>
+
+<p>The position of the two paragraphs is:</p>
+<p id="demo"></p>
+
+<p>
+<strong>Possible values:</strong><br>
+ 1: The two nodes do not belong to the same document.<br>
+ 2: p1 is positioned after p2.<br>
+ 4: p1 is positioned before p2.<br>
+ 8: p1 is positioned inside p2.<br>
+16: p2 is positioned inside p1.<br>
+32: The two nodes are attributes on the same element.</p>
+
+<p>The return value can also be a combination of values.
+Return value 20 means that p2 is inside p1 (16) AND p1 is positioned before p2 (4).</p>
+
+<script>
+const p1 = document.getElementById("p1").lastChild;
+const p2 = document.getElementById("p2").lastChild;
+let position = p1.compareDocumentPosition(p2);
+document.getElementById("demo").innerHTML = position;
+</script>
+<h1>The Element Object</h1>
+<h2>The contains() Method</h2>
+
+<div id="myDIV">
+<p>I am a p element inside "myDIV", and I have a <span id="mySPAN"><b>span</b></span> element inside of me.</p>
+</div>
+
+<p>Does the div element contain a span element?</p>
+<p id="demo"></p>
+
+<script>
+const span = document.getElementById("mySPAN");
+let answer = document.getElementById("myDIV").contains(span);
+document.getElementById("demo").innerHTML = answer;
+</script>
+<h1>The Element Object</h1>
+<h2>The contentEditable Property</h2>
+
+<p id="myP" contenteditable="true">Am I editable?</p>
+<p id="demo"></p>
+
+<script>
+let answer = document.getElementById("myP").contentEditable;
+document.getElementById("demo").innerHTML = answer;
+</script>
+<h1>The Element Object</h1>
+<h2>The dir Property</h2>
+
+<p id="myP">Click "Try it" to change my text direction.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("myP").dir = "rtl";
+}
+</script>
+<h1>The Element Object</h1>
+<h2>The firstChild Property</h2>
+
+<p>Example list:</p>
+<ul id="myList"><li>Coffee</li><li>Tea</li></ul>
+
+<p>The HTML content of the list's first child node is:</p>
+<p id="demo"></p>
+
+<p>Whitespace between elements is considered text nodes.
+If there is a whitespace before the first "li" element, the result will be "undefined".</p>
+
+<script>
+let text = document.getElementById("myList").firstChild.innerHTML;
+document.getElementById("demo").innerHTML = text;
+</script>
+<h1>The Element Object</h1>
+<h2>The firstElementChild Property</h2>
+
+<ul id="myList">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<p>The HTML content of the list's first child is:</p>
+<p id="demo"></p>
+
+<script>
+let text = document.getElementById("myList").firstElementChild.innerHTML;
+document.getElementById("demo").innerHTML = text;
+</script>
+</div>
+
+        <!-- script links -->
+        <script src="htttps://kit.fontawesome.com/774c334e86.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.css"></script>
+
+</body>
+
+</html>
